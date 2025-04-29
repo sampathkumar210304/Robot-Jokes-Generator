@@ -1,0 +1,130 @@
+:root{
+    --accent-color:#4183d7;
+    --background-color:linear-gradient(135deg,#d5f4e6,#f18973,#fefbd8,#f18973);
+    --light-background:gray;
+    --text-color:#f8f8f8;
+    --chatbox-color:rgba(46, 51, 56, 0.267);
+}
+
+
+body{
+    font-family: sans-serif;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(110, 202, 187);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    height: 80vh;
+    width: 40vw;
+    max-height: 80%;
+    margin: 20px;
+    padding: 40px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    color: var(--accent-color);
+}
+
+
+.header .avatar{
+    background-color: var(--accent-color);
+    align-self: center;
+    padding: 1px;
+    width: 50px;
+    border-radius: 50%;
+    animation: pulseAvatar 1.5 infinite;
+
+}
+
+@keyframes pulseAvatar {
+
+    0%,100%{
+        transform: scale(1);
+
+    }
+
+    50%{
+        transform: scale(1.1);
+
+
+    }
+    
+}
+
+
+.header h3{
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(32, 45, 46);
+    margin-right: auto;
+    
+}
+
+
+.chat{
+    background-color: var(--chatbox-color);
+    height: 100%;
+    border-radius: 20px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message{
+    font-size: 15px;
+    line-height: 25px;
+    width: fit-content;
+    max-width: 450px;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+ 
+
+.message.joke{
+    background-color: var(--accent-color);
+    color: #fff;
+    border-top-left-radius: 0px;
+    padding: 30px;
+
+}
+
+
+.message.response{
+    background-color: #eee;
+    border-top-right-radius: 0px;
+    margin-left: auto;
+    padding-right: 30px;
+    color: #000;
+}
+
+.btn{
+    background-color: var(--accent-color);
+    color: #fff;
+    font-family: inherit;
+    border: 0;
+    border-radius: 30px;
+    padding: 14px 40px;
+    margin: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transform: transform 0.2 ease,var(--background-color) 0.2 ease;
+}
+
+
+.btn:hover{
+    background-color: blue;
+}
